@@ -34,12 +34,12 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.AbstractTableModel;
 
-public class MainFrame extends JFrame implements LogBuffer {
+public class MainFrame extends JFrame implements Logger {
 
     private StringBuffer logBuffer;
     private String lookAndFeel;
 
-    private ArrayList<Channel> channelList = new ArrayList<>();
+    private final ArrayList<Channel> channelList = new ArrayList<>();
     private ChannelTableModel channelTableModel;
     private JTable channelTable;
     private LogArea logArea;
@@ -107,7 +107,7 @@ public class MainFrame extends JFrame implements LogBuffer {
         });
 
         // Load the config after the log area is created
-        logArea.addWriter(MainFrame.this);
+        logArea.addLogger(MainFrame.this);
         loadConfig();
 
         // Init LookAndFeel
@@ -371,7 +371,7 @@ public class MainFrame extends JFrame implements LogBuffer {
 
     // Return the buffer to the logBuffer then reset
     @Override
-    public String flushLogBuffer() {
+    public String peekLog() {
         String str = logBuffer.toString();
         logBuffer.setLength(0);
         return str;

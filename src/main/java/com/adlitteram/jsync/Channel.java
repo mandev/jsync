@@ -20,7 +20,7 @@ import java.util.Date;
 /**
  * Une classe pour g2rer les canaux du jSync
  */
-public class Channel implements Runnable, LogBuffer {
+public class Channel implements Runnable, Logger {
 
     private final MainFrame mainframe;
     private final StringBuffer logBuffer = new StringBuffer();
@@ -58,7 +58,7 @@ public class Channel implements Runnable, LogBuffer {
 
     public static Channel create(MainFrame mainframe) {
         Channel channel = new Channel(mainframe);
-        channel.getFrame().getLogArea().addWriter(channel);
+        channel.getFrame().getLogArea().addLogger(channel);
         return channel;
     }
 
@@ -346,11 +346,13 @@ public class Channel implements Runnable, LogBuffer {
 
     // Return the buffer to the logBuffer then reset
     @Override
-    public String flushLogBuffer() {
+    public String peekLog() {
         String str = logBuffer.toString();
         logBuffer.setLength(0);
         return str;
     }
+
+
 
     // Append a string to the logBuffer
     public void logMessage(String str) {

@@ -17,7 +17,7 @@ import javax.swing.text.PlainDocument;
 public class LogArea extends JTextArea implements Runnable {
 
     private int maxLogSize;
-    private final ArrayList<LogBuffer> logBufferList = new ArrayList<>();
+    private final ArrayList<Logger> loggerList = new ArrayList<>();
 
     public static LogArea create() {
         return create(250000, "", 10, 40);
@@ -46,20 +46,20 @@ public class LogArea extends JTextArea implements Runnable {
 
     @Override
     public void run() {
-        StringBuilder buffer = new StringBuilder();
+        StringBuilder logBuffer = new StringBuilder();
 
         while (true) {
-            for (LogBuffer logBuffer : logBufferList) {
-                if (logBuffer != null) {
-                    buffer.append(logBuffer.flushLogBuffer());
+            for (Logger logger : loggerList) {
+                if (logger != null) {
+                    logBuffer.append(logger.peekLog());
                 }
             }
 
-            if (buffer.length() > 0) {
+            if (logBuffer.length() > 0) {
                 SwingUtilities.invokeLater(() -> {
-                    LogArea.this.append(buffer.toString());
+                    LogArea.this.append(logBuffer.toString());
                     LogArea.this.setCaretPosition(LogArea.this.getDocument().getLength());
-                    buffer.setLength(0);
+                    logBuffer.setLength(0);
                 });
             }
 
@@ -67,8 +67,8 @@ public class LogArea extends JTextArea implements Runnable {
         }
     }
 
-    public void addWriter(LogBuffer logBuffer) {
-        logBufferList.add(logBuffer);
+    public void addLogger(Logger logger) {
+        loggerList.add(logger);
     }
 
     private class LogDocument extends PlainDocument {

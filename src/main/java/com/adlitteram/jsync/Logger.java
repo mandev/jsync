@@ -8,9 +8,9 @@
 package com.adlitteram.jsync;
 
 // An interface which defines the interacts of LogBuffer
-public interface LogBuffer {
+public interface Logger {
 
     // Get the Log buffer
-    public String flushLogBuffer();
+    public String peekLog();
 
 }
