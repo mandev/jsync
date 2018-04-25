@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<html>
+    <head>
+        <title>jSync Documentation</title>
+    </head>
+    <body>
+
+        <h2>
+            jSync Documentation
+        </h2>
+
+        <h3>
+            Table of contents
+        </h3>
+        <ul>
+            <li><a href="#Overview">Overview</a>
+            <li><a href="#Installation">Installation</a>
+            <li><a href="#General">General</a>
+            <li><a href="#Menus">Menus</a>
+            <li><a href="#Properties">Channel Properties</a>
+            <li><a href="#States">Channel State</a>
+            <li><a href="#Bugs">Bugs</a>
+            <li><a href="#Copyright">Copyright, Licensing</a>
+            <li><a href="#Acknowledgements">Acknowledgements</a>
+        </ul>
+
+        <h3>
+            <a name="Overview"></a>
+            Overview
+        </h3>
+
+        <p>
+            With jSync, you can, periodically, synchronize a directory or a 
+            bunch of directories, to maintain identical copies of files, for 
+            example to maintain the same state of configurations files for an 
+            app that runs on two differents servers.
+        </p>
+
+        <p>
+            <u>Features</u>
+
+        <ul>
+            <li>Platform independent</li>
+            <li>Easy to use graphical UI (available in English &amp; French)</li>
+            <li>Synchronize sub-directories</li>
+            <li>Delete remaing files in the target directory</li>
+            <li>Criterias to copy file from source to target : 
+                <ul>
+                    <li>date comparaison on files</li>
+                    <li>size comparaison on files</li>
+                    <li>always</li>
+                </ul>
+            </li>
+            <li>multi-channels (multi-thread)</li>
+        </ul>
+
+    </p>
+
+    <h3>
+        <a name="Installation"></a>
+        Installation</h3>
+    <p>
+    <ul>
+        <li><b>Windows :</b> You can either start jSync by double-clicking on jSync.exe.
+        <li><b>Un*x :</b> create a "jSync.sh" shell script with the required paths. <br>
+            => java -jar jSync.jar
+    </ul>
+</p>
+
+<h3>
+    <a name="General"></a>
+    General
+</h3>
+<p>
+
+    A channel is the process that synchronizes directories.
+    You can have multiple channels within the same intance of jSync. 
+    The channel configuration is automacally saved after each modification.
+
+</p>
+
+<h3>
+    <a name="Menus"></a>
+    Menus
+</h3>
+
+<p>
+    <u>Files</u>:
+<ul>
+    <li><b>Start all channels :</b>  Switch all existing channels on and start synchronizing.
+    <li><b>Stop all channels :</b> Swicth all existing channels off 
+    <li><b>Clear log Window :</b> Delete logs comments in the window
+    <li><b>Preference :</b> Open a dialog to change the look and feel
+    <li><b>Quit :</b> Exit jSync
+</ul>
+</p>
+
+<p>
+    <u>Channel</u> :
+<ul>
+    <li><b>New :</b> Create a new channel
+    <li><b>Modify :</b> Open a dialog to modify the selected channel properties
+    <li><b>Start :</b> Switch the selected channel on and start synchronizing
+    <li><b>Stop :</b> Switch the selected channel off
+    <li><b>Destroy :</b> Delete the selected channel
+</ul>
+</p>
+
+<h3>
+    <a name="Properties"></a>
+    Channel Properties
+</h3>
+<p>
+
+<ul>
+    <li><b>Name :</b> Channel name
+    <li><b>Source Directory :</b> Reference source Directory
+    <li><b>Target Directory :</b> The Directory where files have to be copied
+    <li><b>Tempo :</b> Time in minutes between to synchronization
+    <li><b>Include Subdirectories :</b>  If selected, process the sub directories iof the source directory
+    <li><b>Delete orphean files in target directory :</b> If selected, delete file which are present in the target directory but not in the source directory. You have to select this option to maintain the same stucture between the source and target directories.
+    <li><b>Copy Files :</b> Various synchronization crit�rias.
+</ul>
+</p>
+
+<h3>
+    <a name="States"></a>
+    Status of the channel
+</h3>
+<p>
+
+<ul>
+    <li><b>STOPPED :</b> Channel is stopped.  No synchronization
+    <li><b>STARTING :</b> Channel is starting (usually appends for a very short time)
+    <li><b>ACTIVE :</b> Channel is on, waiting for the next synchro.
+    <li><b>RUNNING :</b> Synchronization is running
+    <li><b>ERROR :</b> Error. Look at the log window for more information
+</ul>
+
+</p>
+
+<h3>
+    <a name="Bugs"></a>
+    Bugs
+</h3>
+
+<p>
+    Send bug reports to burma@free.fr. When reporting bugs, please include the version number and date of jSync (from the Help | About box), the version number of your JRE, and the exact wording of any error messages.
+</p>
+
+<h3>
+    <a name="Copyright"></a>
+</h3>
+
+<p>
+    jSync is copyright by Emmanuel Deviller. The licence is contained in the file "licence.txt"
+</p>
+
+<h3>
+    <a name="Acknowledgements"></a>
+    Acknowledgements
+</h3>
+
+<p>
+    Daniel Michalik. He has written the HIGLayout layout manager used by jSync. This package 
+    can be freely distributed under the terms of the GNU Lesser General Public 
+    License. The complete package can be found at 
+    <a href="http://www.autel.cz/dmi/tutorial.html">http://www.autel.cz/dmi/tutorial.html</a>.
+</p>
+
+
+</body>
+</html>

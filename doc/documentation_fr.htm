@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+    <head>
+        <title>Documentation de jSync</title>
+    </head>
+    <body>
+
+        <h2>
+            jSync Documentation
+        </h2>
+
+        <h3>
+            Table des mati�res
+        </h3>
+        <ul>
+            <li><a href="#Overview">Introduction</a>
+            <li><a href="#Installation">Installation</a>
+            <li><a href="#General">G�n�ral</a>
+            <li><a href="#Menus">Menus</a>
+            <li><a href="#Properties">Propri�t�s du canal</a>
+            <li><a href="#States">Etats du canal</a>
+            <li><a href="#Bugs">Bugs</a>
+            <li><a href="#Copyright">Copyright, License</a>
+            <li><a href="#Acknowledgements">Remerciement</a>
+        </ul>
+
+        <h3>
+            <a name="Overview"></a>
+            Introduction
+        </h3>
+        <p>
+        </p>
+
+        <h3>
+            <a name="Installation"></a>
+            Installation
+        </h3>
+        <p>
+        </p>
+
+        <h3>
+            <a name="General"></a>
+            G�n�ral
+        </h3>
+        <p>
+        </p>
+
+        <h3>
+            <a name="Menus"></a>
+            Menus
+        </h3>
+
+
+        <p>
+            <u>Menu Fichiers</u>:
+        <ul>
+            <li><b>D�marrer tous les canaux :</b>  d�marre tous les canaux existants et  lance les synchronisations.
+            <li><b>Arr�ter tous les canaux :</b> arr�te tous les canaux existants
+            <li><b>Effacer la fen�tre de log :</b> supprime tous les commentaires dans la fen�tre inf�rieure
+            <li><b>Pr�f�rence :</b> permet de choisir l'apparence du logiciel (windows/motif/java)
+            <li><b>Quitter :</b> quitte jSync
+        </ul>
+    </p>
+
+    <p>
+        <u>Menu Canal</u> :
+    <ul>
+        <li><b>Nouveau :</b> cr�e un nouveau canal
+        <li><b>Modifier :</b> modifie les propri�t�s du canal s�lectionn�
+        <li><b>D�marrer :</b> D�marre le canal s�lectionn� et lance une synchronisation dans la foul�e
+        <li><b>Arr�ter :</b> arr�te le canal s�lectionn�
+        <li><b>D�truire :</b> supprime le canal s�lectionn�
+    </ul>
+</p>
+
+<h3>
+    <a name="Properties"></a>
+    Propri�t�s du canal
+</h3>
+<p>
+
+<ul>
+    <li><b>Nom du canal :</b> d�crit le canal. (par ex. Synchro Donn�es)
+    <li><b>R�pertoire source :</b> c'est le r�pertoire qui sert de base � la synchronisation - ie. r�pertoire ma�tre. (par ex. D:\Mes Donn�es)
+    <li><b>R�pertoire cible  :</b>  c'est le r�pertoire o� les fichiers/dossiers du r�pertoire source sont recopi�s - ie. r�pertoire de sauvegarde. Ce r�pertoire doit exister avant toute synchronisation. (par ex. C:\Backup Mes Donn�es)
+    <li><b>Temporisation :</b> D�lai en minutes entre deux synchronisations (par ex. 5 )
+    <li><b>Inclure les sous-r�pertoires :</b>  si coch�, prend en compte �galement les sous-dossiers du r�pertoire source
+    <li><b>Effacer les fichiers orphelins :</b> si coch�, efface les fichiers du r�pertoire cible qui ne sont pas pr�sents dans le r�pertoire source (ie. permet de maintenir une copie conforme du  r�pertoire source avec le r�pertoire cible). A noter :</b> quelque soit l'�tat de cette option aucun fichier n'est jamais d�truit ou modifi� dans le r�pertoire source.
+    <li><b>Copier le fichier  :</b> crit�res de synchronisation entre les 2 r�pertoires (g�n�ralement utiliser le choix : "si sa taille diff�re ou si la date est post�rieure au fichier cible")
+</ul>
+</p>
+
+<h3>
+    <a name="States"></a>
+    Etats du canal
+</h3>
+<p>
+
+<ul>
+    <li><b>Arr�t� :</b> le canal est arr�t� - aucune synchronisation possible
+    <li><b>D�marrage en cours :</b> le canal est en cours de d�marrage (il s'agit d'un �tat transitoire tr�s bref)
+    <li><b>Activ� :</b> le canal est d�marr� et est en attente du prochain top de synchronisation. (apr�s la temporisation)
+    <li><b>Synchro en cours :</b> le canal est d�marr� et effectue une synchronisation (recopie/suppression des fichiers dans le r�pertoire  source)
+    <li><b>ERREUR :</b> le canal est en erreur (par ex. le r�pertoire cible n'existe pas ou bien jSync ne poss�de pas les droits pour �crire ou effacer des fichiers dans le r�pertoire cible). Voir la fen�tre de log pour plus d'information.
+</ul>
+
+</p>
+
+<h3>
+    <a name="Bugs"></a>
+    Bugs
+</h3>
+
+<p>
+    Send bug reports to burma@free.fr. When reporting bugs, please include the version number and date of jSync (from the Help | About box), the version number of your JRE, and the exact wording of any error messages.
+</p>
+
+<h3>
+    <a name="Copyright"></a>
+</h3>
+
+<p>
+    jSync is copyright by Emmanuel Deviller. The licence is contained in the file "licence.txt"
+</p>
+
+<h3>
+    <a name="Acknowledgements"></a>
+    Acknowledgements
+</h3>
+
+<p>
+    Daniel Michalik. He has written the HIGLayout layout manager used by jSync. This package 
+    can be freely distributed under the terms of the GNU Lesser General Public 
+    License. The complete package can be found at 
+    <a href="http://www.autel.cz/dmi/tutorial.html">http://www.autel.cz/dmi/tutorial.html</a>.
+</p>
+
+
+</body>
+</html>
