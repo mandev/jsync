@@ -10,7 +10,7 @@ package com.adlitteram.jsync;
 // An interface which defines the interacts of LogBuffer
 public interface Logger {
 
-    // Get the Log buffer
-    public String peekLog();
+   // Get the Log buffer
+   public String peekLog();
 
 }
