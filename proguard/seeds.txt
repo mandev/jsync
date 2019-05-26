@@ -1,2 +1,0 @@
-com.adlitteram.jsync.Main
-com.adlitteram.jsync.Main: void main(java.lang.String[])
