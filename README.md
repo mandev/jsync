@@ -25,7 +25,7 @@ License. The complete package can be found at
 
 jSync is provided under GPL Licence
 
-Copyright Emmanuel Deviller (c)2000-2004
+Copyright Emmanuel Deviller (c) 1999-2003
 
 
 
