@@ -1,7 +1,7 @@
 # jSync 
 
 jSync is a cross platform directory synchronizer written in Java.
-jSync was succesfully tested with SUN JRE/JDK1.4 on Windows & Solaris 7/8.
+jSync was succesfully tested with on Windows, Linux, Os X and Solaris 7/8.
 
 ### Installation
 
@@ -23,7 +23,7 @@ License. The complete package can be found at
 
 ### Licence
 
-jSync is provied under GPL Licence
+jSync is provided under GPL Licence
 
 Copyright Emmanuel Deviller (c)2000-2004
 
