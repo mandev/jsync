@@ -210,3 +210,7 @@ deployment/.vagrant
 ######
 **/overlays/
 
+######
+# Lib
+######
+!**/lib/higlayout/higlayout/1.0/higlayout-1.0.jar
