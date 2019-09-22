@@ -33,6 +33,7 @@
 **/nbdist/
 **/.nb-gradle/
 nb-configuration.xml
+nb-actions.xml
 
 ######################
 # Node
