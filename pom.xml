@@ -14,13 +14,7 @@
     <url>https://github.com/mandev/jsync</url>
     <description>Cross platform directory synchronizer</description>
 
-    <developers>
-        <developer>            
-            <name>Emmanuel Deviller</name>        
-        </developer>
-    </developers>
-
-    <properties>
+     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
