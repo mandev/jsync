@@ -48,9 +48,7 @@ public class PrefDialog extends JDialog {
     private JPanel buildButtonPanel() {
         JButton okButton = new JButton(message("OK"));
         okButton.addActionListener(e -> {
-            if (lookandfeel != null) {
-                mainframe.setLookAndFeel(lookandfeel);
-            }
+            mainframe.setLookAndFeel(lookandfeel);
             PrefDialog.this.dispose();
         });
 
