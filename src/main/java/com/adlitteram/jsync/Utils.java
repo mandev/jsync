@@ -29,7 +29,7 @@ public class Utils {
     public static final Image loadImage(String fileName) {
         URL url = Utils.class.getResource("/" + fileName);
         if (url == null) {
-            System.err.print("Uname to load image : " + fileName);
+            System.err.print("Unable to load image : " + fileName);
             return null;
         }
         return Toolkit.getDefaultToolkit().getImage(url);
